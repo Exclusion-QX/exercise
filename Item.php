@@ -60,6 +60,9 @@ class Item
             if (empty($value)) {
                 exit('Значение не заполнено');
             }
+            if ($property === 'id') {
+                exit('Незозможно изменить id');
+            }
 
             if (gettype($this->$property) === gettype($value)) {
 
